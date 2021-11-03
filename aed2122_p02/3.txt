@@ -1,4 +1,4 @@
-a)  T: O(n*ln(n))  S:
+a)  T: O(n*log(n))  S:
 
 
 b)  T: O(n^2)  S:
