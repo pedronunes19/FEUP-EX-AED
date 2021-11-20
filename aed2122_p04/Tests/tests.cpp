@@ -57,7 +57,7 @@ TEST(test, minPlatforms){
     EXPECT_EQ(1,FunSortProblem::minPlatforms({9.00, 11.00, 12.35}, {10.00, 12.00, 12.40}));
     EXPECT_EQ(3,FunSortProblem::minPlatforms({2.00, 2.10, 3.00, 3.20, 3.50, 5.00 }, { 2.30, 3.40, 3.20, 4.30, 4.00, 5.20 }));
 }
-/*
+
 TEST(test, nutsBolts){
     vector<Piece> nuts = {Piece("n1",10),Piece("n7",9),Piece("n4",11),Piece("n2",8),Piece("n5",7),Piece("n8",12), Piece("n9",15)};
     vector<Piece> bolts = { Piece("b5",7), Piece("b8",12), Piece("b1",10), Piece("b2",8), Piece("b9",15), Piece("b4",11), Piece("b7",9)};
@@ -69,4 +69,4 @@ TEST(test, nutsBolts){
     }
 
 }
- */
+

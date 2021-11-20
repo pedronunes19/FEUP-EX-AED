@@ -63,7 +63,9 @@ unsigned FunSortProblem::minPlatforms (const vector<float> &arrival, const vecto
 }
 
 
-void FunSortProblem::nutsBolts(vector<Piece> &nuts, vector<Piece> &bolts) {
 
+void FunSortProblem::nutsBolts(vector<Piece> &nuts, vector<Piece> &bolts) {
+    sort(nuts.begin(), nuts.end(), [] (Piece p1, Piece p2){return p1.getDiameter()<p2.getDiameter();});
+    sort(bolts.begin(), bolts.end(), [] (Piece p1, Piece p2){return p1.getDiameter()<p2.getDiameter();});
 }
 
