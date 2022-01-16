@@ -89,7 +89,7 @@ TEST(test_2, giantComponents) {
     Graph g8 = FunWithGraphs::graph8();
     EXPECT_EQ(6, g8.giantComponent());
 }
-/*
+
 // ----------------------------------------------------------
 // Exercicio 3: Ordenacao topologica
 // ----------------------------------------------------------
@@ -132,7 +132,7 @@ TEST(test_3, topologicalSorting) {
         EXPECT_LT(distance(order.begin(), u), distance(order.begin(), v)); // pos(u) < pos(v)
     }
 }
-*/
+
 // ----------------------------------------------------------
 // Exercicio 4: Distancias em grafos nao pesados
 // ----------------------------------------------------------

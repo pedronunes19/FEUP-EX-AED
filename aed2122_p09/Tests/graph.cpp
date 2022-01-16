@@ -40,16 +40,19 @@ int Graph::dfs1(int v) {
 
 list<int> Graph::dfs2(int v) {
     list<int> res;
-    res.push_back(v);
     nodes[v].visited = true;
     for (auto e : nodes[v].adj) {
         int w = e.dest;
         if (!nodes[w].visited) {
             list<int> aaa = dfs2(w);
-            for (int a: aaa)
-                res.push_back(a);
+            int help = aaa.size();
+            for (int a = 0; a<help ; a++) {
+                res.push_front(aaa.back());
+                aaa.pop_back();
+            }
         }
     }
+    res.push_front(v);
     return res;
 }
 
@@ -155,8 +158,11 @@ list<int> Graph::topologicalSorting() {
     for (int v =1; v<=n; v++){
         if(!nodes.at(v).visited){
             list<int> aaa = dfs2(v);
-            for (int a: aaa)
-                order.push_back(a);
+            int help = aaa.size();
+            for (int a = 0; a<help ; a++) {
+                order.push_front(aaa.back());
+                aaa.pop_back();
+            }
         }
     }
     return order;
